@@ -5,6 +5,7 @@ const mongoose = require("mongoose")
 const app = express();
 const cors = require("cors")
 const PORT = process.env.PORT || 3001;
+// const session = require("express-session")
 require('dotenv').config()
 
 
@@ -37,6 +38,32 @@ app.use(cors({
 //     origin: ["https://cs-google-readinglist.herokuapp.com"],
 //     credentials: true
 // }))
+
+
+// SESSION
+// =====================================================
+// LOCAL TESTING
+// app.use(session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: {
+//         maxAge: 7200000
+//     }
+// }))
+
+// DEPLOYED
+// app.use(session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: false,
+//     proxy: true,
+//     cookie: {
+//       maxAge: 2 * 60 * 60 * 1000,
+//       sameSite: "none",
+//       secure: true
+//     }
+//   }))
 
 
 // ROUTES

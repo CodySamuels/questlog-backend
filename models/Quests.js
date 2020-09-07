@@ -6,7 +6,7 @@ const Schema = mongoose.Schema;
 
 // SCHEMA
 // ======================================================
-const questSchema = new Schema({
+const QuestSchema = new Schema({
     title: { type: String, required: true },
     questGiver: String,
     synopsis: String,
@@ -15,7 +15,7 @@ const questSchema = new Schema({
     date: { type: Date, default: Date.now }
 });
 
-const Quest = mongoose.model("Quest", questSchema);
+const Quest = mongoose.model("Quest", QuestSchema);
 
 
 // EXPORT
