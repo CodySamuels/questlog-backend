@@ -12,6 +12,7 @@ const QuestSchema = new Schema({
     synopsis: String,
     reward: String,
     importance: Number,
+    complete: Boolean,
     date: { type: Date, default: Date.now }
 });
 
